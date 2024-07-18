@@ -32,7 +32,7 @@ class _TabbarState extends State<Tabbar> {
 
         items: [
         BottomNavigationBarItem(icon:Icon(Icons.home) ,label: 'Home'),
-         BottomNavigationBarItem(icon:Icon(Icons.search) ,label: 'Profile'),
+         BottomNavigationBarItem(icon:Icon(Icons.search) ,label: 'Search'),
           BottomNavigationBarItem(icon:Icon(Icons.library_music_sharp) ,label: 'Library'),
           BottomNavigationBarItem(icon:Icon(Icons.person),label: 'Profile')
         ],

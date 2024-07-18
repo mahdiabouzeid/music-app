@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'tabbar.dart';
+import 'package:musicapp/signup.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -24,9 +25,14 @@ class MyApp extends StatelessWidget {
             fontSize: 12,
           ),
           
-        )
+     
       ),
-      home: Tabbar(),
+          
+        ),
+    
+
+    
+      home: Signup(),
     );
   }
 }

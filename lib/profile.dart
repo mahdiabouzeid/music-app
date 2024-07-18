@@ -9,8 +9,10 @@ class Profile extends StatefulWidget {
 class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return SafeArea(child:  
+    Scaffold(
       body:Text('Profile',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),),
+    ),
     );
   }
 }
