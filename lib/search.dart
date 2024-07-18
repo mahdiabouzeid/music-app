@@ -9,7 +9,22 @@ class Search extends StatefulWidget {
 class _SearchState extends State<Search> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(child: Scaffold(body: Text('Search',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),), 
+    return SafeArea(
+      child: Scaffold(
+      body: Column(
+      children: [
+      const  SizedBox(height: 5.0),
+        TextField(
+        decoration: InputDecoration(
+            labelText: 'Search',
+            border: OutlineInputBorder(),
+            prefixIcon: Icon(Icons.search),
+        ),
+        ),
+      ],),
+      ),
     );
+
+    
   }
 }

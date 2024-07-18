@@ -9,6 +9,7 @@ class Signup extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home :SafeArea(
       child: Scaffold(
+        backgroundColor:Colors.purple,
         body:  Center(
         child:Column(
           mainAxisAlignment: MainAxisAlignment.center,
