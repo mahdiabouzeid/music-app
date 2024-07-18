@@ -18,10 +18,10 @@ class _HomeState extends State<Home> {
           itemBuilder: (context,index){
             return Card(
                child: ListTile(
-                leading: Icon(Icons.music_note),
+                leading:const  Icon(Icons.music_note),
                 title: Text(songs[index].title),
-                subtitle: Text('Album: Random Access Memories'),
-                trailing: IconButton(icon: Icon(Icons.favorite,), color: songs[index].favorite ? Colors.purple : null,
+                subtitle: Text('Album: ${songs[index].album}'),
+                trailing: IconButton(icon: const Icon(Icons.favorite,), color: songs[index].favorite ? Colors.purple : null,
                 onPressed: (){
                   setState(() {
                     songs[index].favorite=!songs[index].favorite;
@@ -30,7 +30,7 @@ class _HomeState extends State<Home> {
                 } )
                 ,
                 onTap: (){
-
+                  
                 },
             ),
             
