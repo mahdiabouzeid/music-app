@@ -10,7 +10,7 @@ class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:Text('search'),
+      body:Text('Profile',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),),
     );
   }
 }

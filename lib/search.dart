@@ -9,8 +9,7 @@ class Search extends StatefulWidget {
 class _SearchState extends State<Search> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Text('search')
+    return SafeArea(child: Scaffold(body: Text('Search',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),), 
     );
   }
 }

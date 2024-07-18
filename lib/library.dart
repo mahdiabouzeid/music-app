@@ -9,6 +9,9 @@ class Library extends StatefulWidget {
 class _LibraryState extends State<Library> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return SafeArea(
+       child: Scaffold(body: Text('Library',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),), 
+    
+    );
   }
 }
