@@ -4,6 +4,7 @@ class Music{
   String album;
   String image;
   String audioUrl;
+  bool favorite=false;
   Music(this.title,this.artist,this.album,this.image,this.audioUrl);
 
 

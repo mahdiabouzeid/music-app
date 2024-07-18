@@ -21,8 +21,16 @@ class _HomeState extends State<Home> {
                 leading: Icon(Icons.music_note),
                 title: Text(songs[index].title),
                 subtitle: Text('Album: Random Access Memories'),
-                onTap: (){
+                trailing: IconButton(icon: Icon(Icons.favorite,), color: songs[index].favorite ? Colors.purple : null,
+                onPressed: (){
+                  setState(() {
+                    songs[index].favorite=!songs[index].favorite;
+                  });
                   
+                } )
+                ,
+                onTap: (){
+
                 },
             ),
             

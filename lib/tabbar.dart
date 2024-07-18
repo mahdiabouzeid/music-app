@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:musicapp/home.dart';
 import 'search.dart';
-import 'library.dart';
+import 'favorite.dart';
 import 'profile.dart';
 class Tabbar extends StatefulWidget {
   const Tabbar({super.key});
@@ -31,9 +31,9 @@ class _TabbarState extends State<Tabbar> {
         },
 
         items: [
-        BottomNavigationBarItem(icon:Icon(Icons.home) ,label: 'Home'),
+     BottomNavigationBarItem(icon:Icon(Icons.home) ,label: 'Home'),
          BottomNavigationBarItem(icon:Icon(Icons.search) ,label: 'Search'),
-          BottomNavigationBarItem(icon:Icon(Icons.library_music_sharp) ,label: 'Library'),
+          BottomNavigationBarItem(icon:Icon(Icons.favorite) ,label: 'Favorites'),
           BottomNavigationBarItem(icon:Icon(Icons.person),label: 'Profile')
         ],
         selectedItemColor: Colors.purple,
