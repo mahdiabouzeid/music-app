@@ -14,6 +14,12 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          backgroundColor: Colors.purple,
+          title: Text('List of Available Songs'),
+          centerTitle: true,
+        ),
         body: ListView.builder(
           itemCount: songs.length,
           itemBuilder: (context,index){
