@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:musicapp/playSong.dart';
 import 'music.dart';
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -30,6 +31,7 @@ class _HomeState extends State<Home> {
                 } )
                 ,
                 onTap: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Playsong(song: songs[index],url:songs[index].image)));
                   
                 },
             ),

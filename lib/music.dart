@@ -14,7 +14,7 @@ List<Music> songs = [
       'Shape of You',
       'Ed Sheeran',
       '÷ (Divide)',
-      'https://https://tfroyal.ie/wp-content/uploads/2023/08/shape-of-you-1080-scaled.jpg',
+      'https://marketplace.canva.com/EAFy2GgsPAo/2/0/1600w/canva-red-minimalist-creative-man-without-head-album-cover-_bB_o4a7jdE.jpg',
       'https://example.com/shape-of-you.mp3',
     ),
     Music(
@@ -35,21 +35,21 @@ List<Music> songs = [
       'Uptown Funk',
       'Mark Ronson ft. Bruno Mars',
       'Uptown Special',
-      'https://https://tfroyal.ie/wp-content/uploads/2023/08/shape-of-you-1080-scaled.jpg',
+      'https://marketplace.canva.com/EAFy2GgsPAo/2/0/1600w/canva-red-minimalist-creative-man-without-head-album-cover-_bB_o4a7jdE.jpg',
       'https://example.com/uptown-funk.mp3',
     ),
     Music(
       'Someone Like You',
       'Adele',
       '21',
-      'https://https://tfroyal.ie/wp-content/uploads/2023/08/shape-of-you-1080-scaled.jpg',
+      'https://marketplace.canva.com/EAFy2GgsPAo/2/0/1600w/canva-red-minimalist-creative-man-without-head-album-cover-_bB_o4a7jdE.jpg',
       'https://example.com/someone-like-you.mp3',
     ),
     Music(
       'Perfect',
       'Ed Sheeran',
       '÷ (Divide)',
-      'https://https://tfroyal.ie/wp-content/uploads/2023/08/shape-of-you-1080-scaled.jpg',
+      'https://marketplace.canva.com/EAFy2GgsPAo/2/0/1600w/canva-red-minimalist-creative-man-without-head-album-cover-_bB_o4a7jdE.jpg',
       'https://example.com/perfect.mp3',
     ),
     Music(

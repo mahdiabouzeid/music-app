@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:musicapp/landingpage.dart';
-import 'landingpage.dart';
+
 
 
 void main() {
