@@ -39,7 +39,7 @@ class _LibraryState extends State<Library> {
                 },
               ),
           ),
-            ):Text('');
+            ):SizedBox.shrink();
 
           }
       

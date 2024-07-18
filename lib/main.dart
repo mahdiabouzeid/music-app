@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:musicapp/signup.dart';
+import 'package:musicapp/landingpage.dart';
+import 'landingpage.dart';
 
 
 void main() {
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
     
 
     
-      home: Signup(),
+      home: LandingPage(),
     );
   }
 }

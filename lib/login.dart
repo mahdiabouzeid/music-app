@@ -13,11 +13,12 @@ class LoginPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children:[
             const Text(
-                'Music App',
+                'MUSIC APP',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 32.0,
                   fontWeight: FontWeight.bold,
+                  fontFamily: 'Pacifico-Regular'
                 ),
               ),
               SizedBox(height: 20.0),
