@@ -1,10 +1,25 @@
 import 'package:flutter/material.dart';
 import 'music.dart';
 
-class Playsong extends StatelessWidget {
- final Music song;
+class Playsong extends StatefulWidget {
+  final Music song;
   final String url;
-  const Playsong({required this.song, super.key,required this.url});
+  
+  const Playsong({super.key, required this.song, required this.url});
+
+  @override
+  State<Playsong> createState() => _PlaysongState();
+}
+
+class _PlaysongState extends State<Playsong> {
+  bool isPlaying = false;
+
+  void togglePlay() {
+    setState(() {
+      isPlaying = !isPlaying;
+    });
+  
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +27,7 @@ class Playsong extends StatelessWidget {
       backgroundColor: Colors.purple,
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: Text(song.title,style: TextStyle(color: Colors.white),),
+        title: Text(widget.song.title, style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.black,
       ),
       body: Padding(
@@ -21,14 +36,35 @@ class Playsong extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              song.title,
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold,color: Colors.white),
+              widget.song.title,
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
             ),
             SizedBox(height: 8),
-            Text('Album: ${song.album}'),
+            Text(
+              'Album: ${widget.song.album}',
+              style: TextStyle(color: Colors.white),
+            ),
             SizedBox(height: 16),
-            Image.network('https://marketplace.canva.com/EAFy2GgsPAo/2/0/1600w/canva-red-minimalist-creative-man-without-head-album-cover-_bB_o4a7jdE.jpg'),
-          ]
+            Image.network(widget.url),
+            SizedBox(height: 20),
+            Center(
+              child: Container(
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.black
+                ),
+                
+                child: IconButton(
+                  icon: Icon(
+                    isPlaying ? Icons.stop : Icons.play_arrow,
+                    color: Colors.white,
+                    size: 64,
+                  ),
+                  onPressed: togglePlay,
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
