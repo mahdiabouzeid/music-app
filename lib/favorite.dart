@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'music.dart';
+import 'playSong.dart';
 class Library extends StatefulWidget {
   const Library({super.key});
 
@@ -37,7 +38,13 @@ class _LibraryState extends State<Library> {
                     songs[index].favorite = !songs[index].favorite;
                   });
                 },
+                
               ),
+              onTap: (){
+                 Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => Playsong(
+                                song: songs[index], url: songs[index].image)));
+              },
           ),
             ):SizedBox.shrink();
 
