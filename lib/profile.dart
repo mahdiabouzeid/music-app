@@ -11,6 +11,7 @@ class Profile extends StatelessWidget {
         automaticallyImplyLeading: false,
         title: Text('Profile'),
         backgroundColor: Colors.purple,
+         centerTitle: true,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
