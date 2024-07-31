@@ -39,7 +39,7 @@ class Privacypolicy extends StatelessWidget {
                     '7. Changes to This Policy\n'
                     'We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.\n\n'
                     '8. Contact Us\n'
-                    'If you have any questions about this Privacy Policy, please contact us at [Your Contact Information].\n\n',
+                    'If you have any questions about this Privacy Policy, please contact us at ali@gmail.com.\n\n',
                 style: TextStyle(fontSize: 16),
               ),
             ],

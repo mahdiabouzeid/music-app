@@ -4,7 +4,7 @@ import 'music.dart';
 class Playsong extends StatefulWidget {
   final Music song;
   final String url;
-  
+
   const Playsong({super.key, required this.song, required this.url});
 
   @override
@@ -18,7 +18,6 @@ class _PlaysongState extends State<Playsong> {
     setState(() {
       isPlaying = !isPlaying;
     });
-  
   }
 
   @override
@@ -26,6 +25,7 @@ class _PlaysongState extends State<Playsong> {
     return Scaffold(
       backgroundColor: Colors.purple,
       appBar: AppBar(
+        centerTitle: true,
         automaticallyImplyLeading: false,
         title: Text(widget.song.title, style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.black,
@@ -51,9 +51,8 @@ class _PlaysongState extends State<Playsong> {
               child: Container(
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.black
+                  color: Colors.black,
                 ),
-                
                 child: IconButton(
                   icon: Icon(
                     isPlaying ? Icons.stop : Icons.play_arrow,

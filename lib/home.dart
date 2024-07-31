@@ -12,6 +12,18 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  @override
+  void initState() {
+    super.initState();
+    getSongs((success) {
+      if (success) {
+        setState(() {});
+      } else {
+        // Handle failure
+        print('Failed to load songs');
+      }
+    });
+  }
   final List<String> imgList = [
     'https://www.billboard.com/wp-content/uploads/2022/03/20.-Joy-Division-%E2%80%98Unknown-Pleasures-1979-album-art-billboard-1240.jpg?w=768',
     'https://www.billboard.com/wp-content/uploads/2022/06/beyonce-Lemonade-album-art-billboard-1240.jpg?w=768',
@@ -38,13 +50,13 @@ class _HomeState extends State<Home> {
               ),
               items: imgList
                   .map((item) => Container(
-                        child: Center(
-                            child: Image.network(
-                          item,
-                          fit: BoxFit.cover,
-                          width: 1000,
-                        )),
-                      ))
+                child: Center(
+                    child: Image.network(
+                      item,
+                      fit: BoxFit.cover,
+                      width: 1000,
+                    )),
+              ))
                   .toList(),
             ),
             // List of Songs
@@ -58,7 +70,7 @@ class _HomeState extends State<Home> {
                       title: Text(songs[index].title),
                       subtitle: Text('Album: ${songs[index].album}'),
                       trailing: IconButton(
-                        icon: const Icon(Icons.favorite),
+                        icon: Icon(Icons.favorite),
                         color: songs[index].favorite ? Colors.purple : null,
                         onPressed: () {
                           setState(() {
@@ -66,11 +78,11 @@ class _HomeState extends State<Home> {
                           });
                         },
                       ),
-                      onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => Playsong(
-                                song: songs[index], url: songs[index].image)));
-                      },
+                      onTap: () {Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => Playsong(
+                          song: songs[index],
+                          url: songs[index].image),
+                      ));},
                     ),
                   );
                 },

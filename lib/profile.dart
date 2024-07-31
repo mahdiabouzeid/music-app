@@ -6,12 +6,12 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       appBar: AppBar(
-        
+      appBar: AppBar(
+
         automaticallyImplyLeading: false,
         title: Text('Profile'),
         backgroundColor: Colors.purple,
-         centerTitle: true,
+        centerTitle: true,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -39,16 +39,16 @@ class Profile extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
-          Divider(),
-          ListTile(
+            Divider(),
+            ListTile(
               leading: Icon(Icons.music_note),
               title: Text('Your Songs',style: TextStyle(color: Colors.white),),
-              
+
             ),
             ListTile(
               leading: Icon(Icons.favorite),
               title: Text('Favorites',style: TextStyle(color: Colors.white)),
-             
+
             ),
             ListTile(
               leading: Icon(Icons.settings),
@@ -56,17 +56,17 @@ class Profile extends StatelessWidget {
             ),
             SizedBox(height: 20),
             Row(
-              children: [
-            Text(
-              'Current Plan:',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold,color: Colors.white),
-            ),
-            SizedBox(width: 5.0,),
-            Text(
-              profile1.payedplan ? 'Paid Plan' : 'Free Plan',
-              style: TextStyle(fontSize: 16, color: Colors.grey),
-            ),
-          ]
+                children: [
+                  Text(
+                    'Current Plan:',
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold,color: Colors.white),
+                  ),
+                  SizedBox(width: 5.0,),
+                  Text(
+                    profile1.payedplan ? 'Paid Plan' : 'Free Plan',
+                    style: TextStyle(fontSize: 16, color: Colors.grey),
+                  ),
+                ]
             )
 
           ],

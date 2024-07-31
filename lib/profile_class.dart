@@ -1,7 +1,7 @@
 class ProfileClass{
  String username;
  String email;
-bool payedplan;
+ bool payedplan;
  ProfileClass(this.username,this.email,this.payedplan);
 
 }

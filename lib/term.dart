@@ -34,7 +34,7 @@ class Term extends StatelessWidget {
                   '8. Disclaimers\n'
                   'The Service is provided as-is, without warranties. We aren’t responsible for any issues related to its use or third-party content.\n\n'
                   '9. Contact\n'
-                  'For questions or issues, contact us at [Your Contact Information].\n\n',
+                  'For questions or issues, contact us at ali@gmail.com.\n\n',
                 ),
 
             ],

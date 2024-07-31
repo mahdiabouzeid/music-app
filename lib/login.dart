@@ -6,6 +6,9 @@ import 'tabbar.dart'; // Ensure this path is correct
 String _baseURL = 'mymusicapp24.atwebpages.com';
 
 class LoginPage extends StatefulWidget {
+  final String? initialEmail;
+
+  LoginPage({this.initialEmail});
   @override
   _LoginPageState createState() => _LoginPageState();
 }
@@ -15,6 +18,8 @@ class _LoginPageState extends State<LoginPage> {
   final TextEditingController email = TextEditingController();
   final TextEditingController password = TextEditingController();
   bool _loading = false;
+
+
 
   void login(String email, String password, Function(bool, String?) update) async {
     try {
@@ -48,6 +53,10 @@ class _LoginPageState extends State<LoginPage> {
     }
   }
 
+  String getEmail(){
+    return '$email';
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,6 +68,7 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                SizedBox(height: 200,),
                 const Text(
                   'MUSIC APP',
                   style: TextStyle(
@@ -68,7 +78,7 @@ class _LoginPageState extends State<LoginPage> {
                     fontFamily: 'Pacifico-Regular',
                   ),
                 ),
-                SizedBox(height: 20.0),
+                SizedBox(height: 40.0),
                 Form(
                   key: formState,
                   child: Column(
@@ -79,7 +89,11 @@ class _LoginPageState extends State<LoginPage> {
                           hintText: 'Enter your email',
                           fillColor: Colors.white,
                           filled: true,
-                          border: OutlineInputBorder(),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(12.0),
+                            borderSide: BorderSide.none,
+                          ),
+                          contentPadding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
                         ),
                         style: TextStyle(color: Colors.black),
                         validator: (value) {
@@ -96,7 +110,11 @@ class _LoginPageState extends State<LoginPage> {
                           hintText: 'Enter your password',
                           fillColor: Colors.white,
                           filled: true,
-                          border: OutlineInputBorder(),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(12.0),
+                            borderSide: BorderSide.none,
+                          ),
+                          contentPadding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
                         ),
                         obscureText: true,
                         style: TextStyle(color: Colors.black),
@@ -107,7 +125,7 @@ class _LoginPageState extends State<LoginPage> {
                           return null;
                         },
                       ),
-                      SizedBox(height: 20.0),
+                      SizedBox(height: 30.0),
                       ElevatedButton(
                         onPressed: _loading ? null : () {
                           if (formState.currentState!.validate()) {
@@ -134,10 +152,29 @@ class _LoginPageState extends State<LoginPage> {
                             );
                           }
                         },
-                        child: Text('Login'),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 14.0),
+                          child: Text(
+                            'Login',
+                            style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white, // Background color
+                          foregroundColor: Colors.purple[800], // Text color
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12.0),
+                          ),
+                          padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 24.0),
+                        ),
                       ),
-                      SizedBox(height: 10),
-                      if (_loading) CircularProgressIndicator(),
+                      SizedBox(height: 20),
+                      if (_loading)
+                        SizedBox(
+                          height: 24.0,
+                          width: 24.0,
+                          child: CircularProgressIndicator(),
+                        ),
                     ],
                   ),
                 ),
