@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'login.dart';
 import 'signup.dart';
+import 'term.dart';
+import 'privacypolicy.dart';
 class LandingPage extends StatelessWidget {
   const LandingPage({super.key});
 
@@ -46,7 +48,7 @@ class LandingPage extends StatelessWidget {
                   children: [
                     TextButton(
                       onPressed: () {
-                       
+                       Navigator.of(context).push(MaterialPageRoute(builder: (context)=> Term()));
                       },
                       child: Text(
                         'Terms of use',
@@ -55,7 +57,7 @@ class LandingPage extends StatelessWidget {
                     ),
                     TextButton(
                       onPressed: () {
-                       
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Privacypolicy()));
                       },
                       child: Text(
                         'Privacy Policy',
