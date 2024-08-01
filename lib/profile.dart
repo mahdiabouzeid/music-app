@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'profile_class.dart';
+import 'favorite.dart';
 class Profile extends StatelessWidget {
   const Profile({super.key});
 
@@ -46,7 +47,10 @@ class Profile extends StatelessWidget {
 
             ),
             ListTile(
-              leading: Icon(Icons.favorite),
+              leading: IconButton(
+                icon: Icon(Icons.favorite) , onPressed: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) =>Library() ));
+              },),
               title: Text('Favorites',style: TextStyle(color: Colors.white)),
 
             ),
@@ -68,7 +72,6 @@ class Profile extends StatelessWidget {
                   ),
                 ]
             )
-
           ],
         ),
       ),

@@ -47,14 +47,8 @@ class _LibraryState extends State<Library> {
               },
           ),
             ):SizedBox.shrink();
-
           }
-      
-        
       ),
-        
-      
     );
-    
   }
 }

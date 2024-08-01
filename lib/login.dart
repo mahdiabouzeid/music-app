@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert' as convert;
-import 'tabbar.dart'; // Ensure this path is correct
+import 'tabbar.dart';
 
 String _baseURL = 'mymusicapp24.atwebpages.com';
 
@@ -18,8 +18,6 @@ class _LoginPageState extends State<LoginPage> {
   final TextEditingController email = TextEditingController();
   final TextEditingController password = TextEditingController();
   bool _loading = false;
-
-
 
   void login(String email, String password, Function(bool, String?) update) async {
     try {

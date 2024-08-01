@@ -13,10 +13,10 @@ class Tabbar extends StatefulWidget {
 class _TabbarState extends State<Tabbar> {
   int _selected=0;
    final List<Widget> _pages = [
-    Home(), // Replace with your actual Home widget
-    Search(), // Replace with your actual Search widget
-    Library(), // Replace with your actual Library widget
-    Profile(), // Replace with your actual Profile widget
+    Home(),
+    Search(),
+    Library(),
+    Profile(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -39,8 +39,6 @@ class _TabbarState extends State<Tabbar> {
         selectedItemColor: Colors.purple,
         unselectedItemColor: Colors.black,
         ),
-        
-     
     );
   }
 }

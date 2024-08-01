@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:musicapp/home.dart';
 import 'package:musicapp/landingpage.dart';
-import 'login.dart';
-import 'signup.dart';
-
-
 
 void main() {
   runApp(const MyApp());
@@ -33,6 +28,5 @@ class MyApp extends StatelessWidget {
         ),
       home: LandingPage(),
     );
-
   }
 }
